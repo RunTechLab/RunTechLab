@@ -5,93 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RunTech Lab</title>
   <meta name="description" content="La rivista online per runner: scarpe, allenamento e wearable sportivi raccontati con taglio chiaro e pratico.">
-  <link rel="stylesheet" href="stile.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="masthead">
-    <div class="container masthead-grid">
-      <div class="masthead-kicker">
-        <span>RunTech Lab</span>
-        <span>Magazine digitale</span>
-      </div>
-      <div class="masthead-content">
-        <p class="eyebrow">Running, scarpe e wearable</p>
-        <h1>La rivista per chi corre e vuole scegliere meglio.</h1>
-        <p class="lead">Approfondimenti chiari su scarpe running, allenamento e wearable sportivi. Un taglio editoriale essenziale, con lettura rapida e gerarchia visiva pulita.</p>
-      </div>
-      <aside class="masthead-feature">
-        <p class="card-label">Da leggere ora</p>
-        <h2>Nike Pegasus 42: recensione completa e novita</h2>
-        <p>Il modello quotidiano più riconoscibile di Nike, letto da una prospettiva concreta: comfort, versatilita e uso reale negli allenamenti di tutti i giorni.</p>
-        <a class="button" href="/articoli/nike-pegasus-42.html">Apri l'articolo</a>
-      </aside>
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="/" aria-label="RunTech Lab home">
+        <span class="brand-mark">RTL</span>
+        <span class="brand-text">
+          <strong>RunTech Lab</strong>
+          <span>Magazine sportivo</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Navigazione principale">
+        <a href="/">Home</a>
+        <a href="/articoli/nike-pegasus-42.html">Articoli</a>
+        <a href="#scarpe">Scarpe</a>
+        <a href="#wearable">Wearable</a>
+        <a href="#studio">Studio</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container magazine">
-    <section class="hero-story">
-      <article class="hero-story-text">
-        <p class="eyebrow">Focus del numero</p>
-        <h2>Scarpe da allenamento, modelli versatili e strumenti che aiutano davvero a correre meglio.</h2>
-        <p>La homepage mette al centro i temi editoriali, non la struttura del sito. Ogni contenuto deve sembrare una storia da sfogliare, non una scheda tecnica.</p>
-      </article>
-      <div class="hero-story-panel">
-        <div>
-          <span class="panel-label">Temi chiave</span>
-          <strong>Scarpe running</strong>
-          <p>Daily trainer, super trainer e modelli da rotazione.</p>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Editoriale di corsa</p>
+          <h1>La rivista per chi corre e vuole scegliere con criterio.</h1>
+          <p class="lead">RunTech Lab racconta scarpe running, wearable sportivi e allenamento con un taglio da redazione: selettivo, pulito, orientato ai lettori e ai prodotti che contano davvero.</p>
+          <div class="hero-actions">
+            <a class="button" href="/articoli/nike-pegasus-42.html">Leggi l'articolo in copertina</a>
+            <a class="text-link" href="#ultimi">Scorri i contenuti</a>
+          </div>
+          <div class="hero-stats" aria-label="Temi principali">
+            <div><strong>01</strong><span>Scarpe da corsa</span></div>
+            <div><strong>02</strong><span>Wearable sportivi</span></div>
+            <div><strong>03</strong><span>Allenamento utile</span></div>
+          </div>
         </div>
-        <div>
-          <span class="panel-label">Secondo asse</span>
-          <strong>Wearable sportivi</strong>
-          <p>Orologi, cardio, autonomia e dati utili sul campo.</p>
-        </div>
+
+        <aside class="hero-visual" aria-label="Area visual per futura immagine">
+          <div class="hero-visual-frame">
+            <span class="hero-visual-label">Hero visual</span>
+            <strong>Copertina visiva per la prossima uscita</strong>
+            <p>Inserisci qui una fotografia editoriale: una scarpa, una scena di corsa, un wearable sul polso o una composizione di prodotto.</p>
+            <img src="/immagini/cover-runtech.svg" alt="Copertina editoriale RunTech Lab">
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="editorial-section">
-      <div class="section-heading">
-        <p class="eyebrow">In evidenza</p>
-        <h2>Articoli in primo piano</h2>
-      </div>
-      <div class="feature-list">
-        <article class="feature-card feature-card-large">
-          <p class="card-label">Articolo principale</p>
-          <h3><a href="/articoli/nike-pegasus-42.html">Nike Pegasus 42: recensione completa e novita</a></h3>
-          <p>Una lettura pratica della scarpa simbolo del running quotidiano. Il punto non e stupire, ma capire se ha davvero senso nella routine di corsa.</p>
-          <a class="text-link" href="/articoli/nike-pegasus-42.html">Leggi ora</a>
-        </article>
-        <article class="feature-card">
-          <p class="card-label">Rubrica</p>
-          <h3>Scarpe da corsa</h3>
-          <p>Recensioni, confronti e analisi delle scarpe che contano davvero per chi corre con continuita.</p>
-        </article>
-        <article class="feature-card">
-          <p class="card-label">Rubrica</p>
-          <h3>Wearable sportivi</h3>
-          <p>Orologi, GPS, cardio e autonomia spiegati in modo semplice, con attenzione all'utilita reale.</p>
-        </article>
-      </div>
-    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">In evidenza</p>
+          <h2>Articoli in primo piano</h2>
+        </div>
 
-    <section class="editorial-section">
-      <div class="section-heading">
-        <p class="eyebrow">Taglio editoriale</p>
-        <h2>Una rivista leggibile, con ritmo visivo chiaro</h2>
-      </div>
-      <div class="grid cards">
-        <article class="card">
-          <h3>Gerarchia forte</h3>
-          <p>Titoli grandi, spazi ampi e blocchi distinti per guidare il lettore senza affaticarlo.</p>
+        <article class="featured-article" id="ultimi">
+          <div class="featured-media" aria-hidden="true">
+            <span>Feature story</span>
+          </div>
+          <div class="featured-content">
+            <p class="card-label">Articolo principale</p>
+            <h3><a href="/articoli/nike-pegasus-42.html">Nike Pegasus 42: recensione completa e novita</a></h3>
+            <p>La daily trainer di Nike letta come farebbe una redazione specializzata: profilo, ruolo, sensazione su strada e utilita concreta per il runner di tutti i giorni.</p>
+            <a class="text-link" href="/articoli/nike-pegasus-42.html">Apri l'articolo</a>
+          </div>
         </article>
-        <article class="card">
-          <h3>Focus running</h3>
-          <p>Contenuti centrati su scarpe, allenamento e tecnologia utile alla corsa, senza dispersione.</p>
-        </article>
-        <article class="card">
-          <h3>Stile premium</h3>
-          <p>Palette calda, contrasti morbidi e layout editoriale per un aspetto più autorevole e contemporaneo.</p>
-        </article>
+
+        <div class="article-grid" id="scarpe">
+          <article class="story-card">
+            <p class="card-label">Scarpe running</p>
+            <h3><a href="/articoli/super-trainer-hype.html">Daily trainer, super trainer e scarpe da rotazione</a></h3>
+            <p>Una guida editoriale per capire quali modelli hanno senso davvero nel guardaroba del runner.</p>
+          </article>
+          <article class="story-card" id="wearable">
+            <p class="card-label">Wearable sportivi</p>
+            <h3><a href="/articoli/garmin-vs-coros-2026.html">Orologi, GPS e cardio letti con criterio</a></h3>
+            <p>Dati utili, autonomia reale e funzioni che migliorano la corsa invece di complicarla.</p>
+          </article>
+          <article class="story-card">
+            <p class="card-label">Allenamento</p>
+            <h3><a href="/articoli/zona-2-funziona-davvero.html">Contenuti pensati per correre meglio, non per accumulare numeri</a></h3>
+            <p>Un taglio chiaro e leggibile per accompagnare allenamenti, recupero e scelte di acquisto.</p>
+          </article>
+        </div>
+
+        <div class="article-grid editorial-secondary">
+          <article class="story-card">
+            <p class="card-label">Smartwatch</p>
+            <h3><a href="/articoli/i-migliori-smartwatch-running-2026.html">I migliori smartwatch running del 2026</a></h3>
+            <p>Una selezione essenziale per chi cerca dati utili, batteria e semplicità d’uso.</p>
+          </article>
+          <article class="story-card">
+            <p class="card-label">Gare</p>
+            <h3><a href="/articoli/le-gare-running-piu-interessanti-autunno-2026.html">Le gare running più interessanti dell'autunno 2026</a></h3>
+            <p>Obiettivi di stagione scelti per qualità dell’esperienza e logistica, non solo per prestigio.</p>
+          </article>
+          <article class="story-card">
+            <p class="card-label">Approfondimento</p>
+            <h3><a href="/articoli/nike-pegasus-42.html">Nike Pegasus 42: recensione completa e novita</a></h3>
+            <p>La feature story di apertura resta sempre visibile come riferimento per il tono del magazine.</p>
+          </article>
+        </div>
+
+        <div class="editorial-band" id="studio">
+          <div>
+            <p class="card-label">Linea editoriale</p>
+            <h3>Impostazione definita, taglio autorevole, lettura rapida</h3>
+          </div>
+          <p>Ogni pagina deve apparire come una vera uscita di magazine: titoli forti, immagini evidenziate, ritmo visivo controllato e contenuti che guidano il lettore con precisione.</p>
+        </div>
       </div>
     </section>
   </main>
