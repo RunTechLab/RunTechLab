@@ -32,7 +32,7 @@ img{display:block;max-width:100%}
 .site-nav a{text-decoration:none;color:var(--muted)}
 .site-nav a:hover{color:var(--accent)}
 .cover{position:relative;min-height:560px;display:grid;align-items:end;overflow:hidden;background:#151515}
-.cover-media{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.90),rgba(0,0,0,.58),rgba(0,0,0,.22)),url("immagini/garmin-vs-coros-2026-hero.webp") center/cover no-repeat}
+.cover-media{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.90),rgba(0,0,0,.58),rgba(0,0,0,.22)),url("immagini/hero-running-magazine.webp") center/cover no-repeat}
 .cover-overlay{position:relative;width:100%;padding:96px 0 58px}
 .cover-content{color:#fff}
 .eyebrow{margin:0 0 12px;color:var(--accent);font-size:.78rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
