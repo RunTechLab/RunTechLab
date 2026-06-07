@@ -8,6 +8,7 @@ on:
       - "articoli/**"
       - "immagini/**"
       - "publish_article.py"
+      - ".github/workflows/publish.yml"
 
 permissions:
   contents: write
@@ -25,13 +26,13 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Update homepage and sitemap
+      - name: Update homepage, sitemap and analytics
         run: python publish_article.py --ci
 
       - name: Commit generated files
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add index.html sitemap.xml output/report/pubblicazione.txt
-          git diff --cached --quiet || git commit -m "Aggiorna homepage e sitemap"
+          git add index.html sitemap.xml publish_article.py articoli/*.html output/report/pubblicazione.txt
+          git diff --cached --quiet || git commit -m "Aggiorna homepage sitemap e analytics"
           git push
