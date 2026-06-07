@@ -1,0 +1,41 @@
+name: Update RunTech Lab index and sitemap
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "articoli/**/*.html"
+      - "immagini/**"
+      - "publish_article.py"
+
+permissions:
+  contents: write
+
+jobs:
+  update-site:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Validate articles and update site files
+        run: python publish_article.py --ci
+
+      - name: Commit generated index and sitemap
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html sitemap.xml output/report/pubblicazione.txt
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+          else
+            git commit -m "Update article index and sitemap"
+            git push
+          fi
