@@ -1,0 +1,16 @@
+RunTech Lab - report pubblicazione
+
+Articoli validi:
+- scarpe-running-principianti-2026.html
+- garmin-vs-coros-2026.html
+
+Articoli esclusi:
+- nike-pegasus-42.html
+  - meta description fuori range (123)
+  - manca property="og:url"
+  - manca ../stile.css
+  - verdetto incompleto: manca Sintesi finale
+  - verdetto incompleto: manca Per chi ha senso
+  - verdetto incompleto: manca Per chi non ha senso
+  - verdetto incompleto: manca Valutazione pratica
+  - immagine non trovata: ../immagini/hero-running-magazine.png
