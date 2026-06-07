@@ -38,6 +38,8 @@ REPORT_DIR = OUTPUT_DIR / "report"
 ARTICLE_START = "<!-- RUNTECH:ARTICLES:START -->"
 ARTICLE_END = "<!-- RUNTECH:ARTICLES:END -->"
 
+CLOUDFLARE_ANALYTICS_SNIPPET = """<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "94eea5e84787487c99bf1e73c114700e"}'></script><!-- End Cloudflare Web Analytics -->"""
+
 
 @dataclass
 class Article:
@@ -235,6 +237,33 @@ def valid_articles() -> tuple[list[Article], dict[str, list[str]]]:
             rejected[path.name] = errors
     articles.sort(key=lambda item: (item.date_iso, item.path.stat().st_mtime), reverse=True)
     return articles, rejected
+
+
+
+def inject_cloudflare_analytics(markup: str) -> str:
+    """Insert Cloudflare Web Analytics before </head>, avoiding duplicates."""
+    if "static.cloudflareinsights.com/beacon.min.js" in markup:
+        return markup
+    if "</head>" not in markup:
+        return markup
+    return markup.replace("</head>", f"  {CLOUDFLARE_ANALYTICS_SNIPPET}\n</head>", 1)
+
+
+def ensure_analytics_on_site() -> None:
+    """Apply Cloudflare Analytics to homepage and all public article pages."""
+    html_files = [INDEX_PATH]
+    if ARTICLES_DIR.exists():
+        html_files.extend(
+            path for path in sorted(ARTICLES_DIR.glob("*.html"))
+            if not path.name.startswith("_")
+        )
+    for path in html_files:
+        if not path.exists():
+            continue
+        current = read_text(path)
+        updated = inject_cloudflare_analytics(current)
+        if updated != current:
+            write_text(path, updated)
 
 
 def update_index(articles: list[Article]) -> None:
