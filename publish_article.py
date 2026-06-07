@@ -240,6 +240,7 @@ def valid_articles() -> tuple[list[Article], dict[str, list[str]]]:
 
 
 
+
 def inject_cloudflare_analytics(markup: str) -> str:
     """Insert Cloudflare Web Analytics before </head>, avoiding duplicates."""
     if "static.cloudflareinsights.com/beacon.min.js" in markup:
@@ -257,6 +258,7 @@ def ensure_analytics_on_site() -> None:
             path for path in sorted(ARTICLES_DIR.glob("*.html"))
             if not path.name.startswith("_")
         )
+
     for path in html_files:
         if not path.exists():
             continue
@@ -264,7 +266,6 @@ def ensure_analytics_on_site() -> None:
         updated = inject_cloudflare_analytics(current)
         if updated != current:
             write_text(path, updated)
-
 
 def update_index(articles: list[Article]) -> None:
     markup = read_text(INDEX_PATH)
@@ -401,6 +402,7 @@ def main() -> int:
 
     update_index(articles)
     update_sitemap(articles)
+    ensure_analytics_on_site()
     write_report(articles, rejected)
     if args.prepare_upload:
         prepare_upload(articles)
