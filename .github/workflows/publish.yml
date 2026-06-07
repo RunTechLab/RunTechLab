@@ -33,6 +33,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add index.html sitemap.xml publish_article.py articoli/*.html output/report/pubblicazione.txt
+          git add index.html sitemap.xml articoli/*.html output/report/pubblicazione.txt
           git diff --cached --quiet || git commit -m "Aggiorna homepage sitemap e analytics"
           git push
