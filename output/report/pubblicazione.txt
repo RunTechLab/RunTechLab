@@ -14,3 +14,5 @@ Articoli esclusi:
   - verdetto incompleto: manca Per chi non ha senso
   - verdetto incompleto: manca Valutazione pratica
   - immagine non trovata: ../immagini/hero-running-magazine.png
+- zona-2-running-2026.html
+  - immagine non trovata: ../immagini/zona-2-running-2026-hero.webp
